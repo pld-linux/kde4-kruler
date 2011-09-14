@@ -1,33 +1,23 @@
 %define		_state		stable
-%define		qtver		4.7.3
+%define		qtver		4.7.4
 
 Name:		kruler
-Version:	4.7.0
-Release:	0.1
+Version:	4.7.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	882e82f9d5a934663401d8f3349da8cd
+# Source0-md5:	392304d7e1b2e5fefd2f9fbd8e721767
 Summary:	KRuler
 Summary(pl.UTF-8):	Linijka dla KDE
 Summary(pt_BR.UTF-8):	Régua de pixels para a tela
 Group:		X11/Applications/Graphics
 URL:		http://www.kde.org/
-BuildRequires:	Qt3Support-devel >= %{qtver}
-BuildRequires:	QtCore-devel >= %{qtver}
-BuildRequires:	automoc4 >= 0.9.88
-BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdelibs-devel >= %{version}
-BuildRequires:	libgphoto2-devel
-BuildRequires:	libstdc++-devel
-BuildRequires:	perl
-BuildRequires:	qt4-build >= %{qtver}
-BuildRequires:	qt4-qmake >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRequires:	xorg-lib-libX11-devel
 Requires:	kde4-kdebase >= %{version}
 Requires:	kde4-kdebase >= %{version}
-Obsoletes:	kde4-kdegraphics-kruler
+Obsoletes:	kde4-kdegraphics-kruler < 4.6.99
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,7 +38,6 @@ Régua de pixels para a tela.
 install -d build
 cd build
 %cmake \
-	-DGWENVIEW_SEMANTICINFO_BACKEND=Nepomuk \
 	../
 
 %{__make}
