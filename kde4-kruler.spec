@@ -2,12 +2,12 @@
 %define		qtver		4.7.4
 
 Name:		kruler
-Version:	4.7.1
+Version:	4.7.3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	392304d7e1b2e5fefd2f9fbd8e721767
+# Source0-md5:	1cddcdc8ffa04f51c7f6b23df283a783
 Summary:	KRuler
 Summary(pl.UTF-8):	Linijka dla KDE
 Summary(pt_BR.UTF-8):	Régua de pixels para a tela
