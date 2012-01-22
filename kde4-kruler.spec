@@ -1,13 +1,14 @@
 %define		_state		stable
-%define		qtver		4.7.4
+%define		orgname		kruler
+%define		qtver		4.8.0
 
-Name:		kruler
-Version:	4.7.3
+Name:		kde4-kruler
+Version:	4.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	1cddcdc8ffa04f51c7f6b23df283a783
+Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
+# Source0-md5:	98036f7a77e914aaae3da9ca9d638806
 Summary:	KRuler
 Summary(pl.UTF-8):	Linijka dla KDE
 Summary(pt_BR.UTF-8):	Régua de pixels para a tela
@@ -18,6 +19,7 @@ BuildRequires:	xorg-lib-libX11-devel
 Requires:	kde4-kdebase >= %{version}
 Requires:	kde4-kdebase >= %{version}
 Obsoletes:	kde4-kdegraphics-kruler < 4.6.99
+Obsoletes:	kruler <= 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +34,7 @@ odległości na ekranie.
 Régua de pixels para a tela.
 
 %prep
-%setup -q
+%setup -q -n %{orgname}-%{version}
 
 %build
 install -d build
