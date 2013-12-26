@@ -3,12 +3,12 @@
 %define		qtver		4.8.0
 
 Name:		kde4-kruler
-Version:	4.11.4
+Version:	4.12.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	a38ad20a2a74441588ec962c64f7557c
+# Source0-md5:	60a439b3c47b721b8d6546a7ea6496fb
 Summary:	KRuler
 Summary(pl.UTF-8):	Linijka dla KDE
 Summary(pt_BR.UTF-8):	Régua de pixels para a tela
@@ -16,7 +16,6 @@ Group:		X11/Applications/Graphics
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdelibs-devel >= %{version}
 BuildRequires:	xorg-lib-libX11-devel
-Requires:	kde4-kdebase >= %{version}
 Requires:	kde4-kdebase >= %{version}
 Obsoletes:	kde4-kdegraphics-kruler < 4.6.99
 Obsoletes:	kruler <= 4.8.0
